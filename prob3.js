@@ -7,13 +7,47 @@ let likelion = [
 
 // 1번 문제 코드작성
 
+
+console.log("1번문제");
+
+for(let i=0;i<likelion.length-1;i++){
+  for(let j=i+1;j<likelion.length;j++){
+    if(likelion[i].age > likelion[j].age){
+      let temp = likelion[i];
+      likelion[i]=likelion[j];
+      likelion[j]=temp;
+    }
+  }
+ }
+console.log(likelion);
+
+  
+
 // 2번 문제 코드작성
+
+console.log("2번문제");
 let result2 = [];
 
-console.log(result2);
+for(let i=0;i<likelion.length;i++){
+  if(likelion[i].age >=24){
+    result2 = likelion[i];
+    console.log(result2);
+  }
+}
+
+
+
+
 
 // 3번 문제 코드작성
+console.log("3번문제")
 let targetName = "전수빈";
 let result3 = null;
+
+for(let i=0;i<likelion.length;i++){
+  if(likelion[i].name === targetName){
+    result3 = likelion[i].part;
+  }
+}
 
 console.log(result3);
