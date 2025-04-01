@@ -6,14 +6,32 @@ let likelion = [
 ];
 
 // 1번 문제 코드작성
+let result1 = likelion;
+for (let i = 0; i < result1.length - 1; i++){
+  for (let j = 0; j < result1.length - 1 - i; j++){
+    if (result1[j].age > result1[j+1].age){
+      [result1[j], result1[j+1]] = [result1[j+1], result1[j]];
+    }
+  }
+}
+console.log("나이순:", result1);
+
 
 // 2번 문제 코드작성
 let result2 = [];
-
-console.log(result2);
+for (let i = 0; i < likelion.length; i++){
+  if (likelion[i].age > 24){
+    result2.push(likelion[i]);
+  }
+}
+console.log("24세 이상 팀원:", result2);
 
 // 3번 문제 코드작성
 let targetName = "전수빈";
 let result3 = null;
-
-console.log(result3);
+for (let i = 0; i < likelion.length; i++){
+  if (likelion[i].name === targetName){
+    result3 = likelion[i].part;
+  }
+}
+console.log(targetName, "님 Part:", result3);
