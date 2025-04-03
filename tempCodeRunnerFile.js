@@ -3,10 +3,8 @@
 function solution(num, total) {
 
   let answer = [];
-  let avg= total/num;
-  let start = avg- (num-1)/2;
-  
-  for(let i=0;i<num;i++){
+  let start = (total/num)-(total%num);
+  for(let i=1;i<=num;i++){
      answer[i]= start+i;
   }
   return answer;
